@@ -3,14 +3,14 @@ import { Controller } from 'stimulus'
 export default class extends Controller {
   static targets = ['button', 'source']
   static values = {
-    successDelay: Number
+    successDuration: Number
   }
 
   connect () {
     if (!this.hasButtonTarget) return
 
     this.originalText = this.buttonTarget.innerText
-    this.delay = this.successDelayValue || 2000
+    this.successDuration = this.successDurationValue || 2000
   }
 
   copy (event) {
@@ -29,10 +29,10 @@ export default class extends Controller {
       clearTimeout(this.timeout)
     }
 
-    this.buttonTarget.innerText = this.data.get('successText')
+    this.buttonTarget.innerText = this.data.get('successContent')
 
     this.timeout = setTimeout(() => {
       this.buttonTarget.innerText = this.originalText
-    }, this.delay)
+    }, this.successDuration)
   }
 }
