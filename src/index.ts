@@ -13,6 +13,7 @@ export default class extends Controller {
   static values = {
     successDuration: Number
   }
+  static classes = ['copy', 'copied']
 
   connect (): void {
     if (!this.hasButtonTarget) return
@@ -38,9 +39,24 @@ export default class extends Controller {
     }
 
     this.buttonTarget.innerText = this.data.get('successContent')
+    if (this.hasCopyClass) {
+      this.buttonTarget.classList.remove(this.copyClass)
+    }
+    if (this.hasCopiedClass) {
+      this.buttonTarget.classList.add(this.copiedClass)
+    }
 
     this.timeout = setTimeout(() => {
       this.buttonTarget.innerText = this.originalText
+      if (this.hasCopyClass) {
+        this.buttonTarget.classList.add(this.copyClass)
+      }
+      if (this.hasCopiedClass) {
+        this.buttonTarget.classList.remove(this.copiedClass)
+      }
+
     }, this.successDuration)
   }
+
+
 }
