@@ -6,9 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 2021-09-28
 ### Chore
 
-- Upgrading Stimulus to v3.0.0 and change namespace from `stimulus` to `@hotwired/stimulus`.
+- **Breaking** Upgrading Stimulus to `3.x` and change namespace from `stimulus` to `@hotwired/stimulus`.
+- Using default value option for `successDuration`.
 
 ## [2.0.0] - 2021-06-02
 
