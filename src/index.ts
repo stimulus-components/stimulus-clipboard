@@ -3,7 +3,6 @@ import { Controller } from '@hotwired/stimulus'
 export default class extends Controller {
   hasButtonTarget: boolean
   originalText: string
-  successDuration: number
   successDurationValue: number
   timeout: number
   buttonTarget: HTMLElement
@@ -11,14 +10,16 @@ export default class extends Controller {
 
   static targets = ['button', 'source']
   static values = {
-    successDuration: Number
+    successDuration: {
+      type: Number,
+      default: 2000
+    }
   }
 
   connect (): void {
     if (!this.hasButtonTarget) return
 
     this.originalText = this.buttonTarget.innerText
-    this.successDuration = this.successDurationValue || 2000
   }
 
   copy (event: Event): void {
@@ -41,6 +42,6 @@ export default class extends Controller {
 
     this.timeout = setTimeout(() => {
       this.buttonTarget.innerText = this.originalText
-    }, this.successDuration)
+    }, this.successDurationValue)
   }
 }
