@@ -25,10 +25,7 @@ export default class extends Controller {
   copy (event: Event): void {
     event.preventDefault()
 
-    this.sourceTarget.select()
-    document.execCommand('copy')
-
-    this.copied()
+    navigator.clipboard.writeText(this.sourceText()).then(() => this.copied())
   }
 
   copied (): void {
@@ -43,5 +40,9 @@ export default class extends Controller {
     this.timeout = setTimeout(() => {
       this.buttonTarget.innerText = this.originalText
     }, this.successDurationValue)
+  }
+
+  sourceText (): string {
+    return this.sourceTarget.value
   }
 }
