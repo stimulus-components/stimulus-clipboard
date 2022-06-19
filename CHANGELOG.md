@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Chore
 
 - Bump dependencies.
+- Using Clipboard API over execCommand.
 
 ## [3.1.0] - 2022-04-15
 
