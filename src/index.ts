@@ -25,7 +25,11 @@ export default class extends Controller {
   copy (event: Event): void {
     event.preventDefault()
 
-    navigator.clipboard.writeText(this.sourceTarget.value).then(() => this.copied())
+    if("input" == this.sourceTarget.tagName) {
+      navigator.clipboard.writeText(this.sourceTarget.value).then(() => this.copied())
+    } else {
+      navigator.clipboard.writeText(this.sourceTarget.innerText).then(() => this.copied())
+    }
   }
 
   copied (): void {
