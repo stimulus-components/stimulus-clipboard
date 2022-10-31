@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.2]
+
+### Chore
+
+- Allow `sourceTarget` to be any HTML element to copy its `innerHTML`.
+
 ## [3.2.1]
 
 ### Chore
