@@ -6,6 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.1]
+
+### Chore
+
+- Use innerHTML for originalContent, so icons can be used (https://github.com/stimulus-components/stimulus-clipboard/pull/8)
+- Bump dependencies.
+
 ## [3.2.0]
 
 ### Chore
