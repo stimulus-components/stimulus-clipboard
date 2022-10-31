@@ -12,7 +12,7 @@ A Stimulus controller to copy text to clipboard.
 
 ## 📚 Documentation
 
-See [stimulus-clipboard documentation](https://stimulus-components.netlify.app/docs/components/stimulus-clipboard/).
+See [stimulus-clipboard documentation](https://www.stimulus-components.com/docs/stimulus-clipboard/).
 
 ## 👷‍♂️ Contributing
 
