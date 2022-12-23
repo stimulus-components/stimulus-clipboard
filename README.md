@@ -4,7 +4,6 @@
 [![](https://img.shields.io/npm/v/stimulus-clipboard.svg)](https://www.npmjs.com/package/stimulus-clipboard)
 [![](https://github.com/stimulus-components/stimulus-clipboard/workflows/Lint/badge.svg)](https://github.com/stimulus-components/stimulus-clipboard)
 [![](https://img.shields.io/github/license/stimulus-components/stimulus-clipboard.svg)](https://github.com/stimulus-components/stimulus-clipboard)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/80f85acb-2a15-4326-9bd1-92a461e53c22/deploy-status)](https://stimulus-clipboard.netlify.com)
 
 ## Getting started
 
