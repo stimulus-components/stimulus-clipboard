@@ -42,7 +42,7 @@ export default class extends Controller {
       clearTimeout(this.timeout)
     }
 
-    this.buttonTarget.innerText = this.successContentValue
+    this.buttonTarget.innerHTML = this.successContentValue
 
     this.timeout = setTimeout(() => {
       this.buttonTarget.innerHTML = this.originalContent
