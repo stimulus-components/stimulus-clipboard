@@ -1,6 +1,9 @@
 {
   "name": "stimulus-clipboard",
   "version": "3.3.0",
+  "engines": {
+    "node": "18"
+  },
   "description": "A Stimulus controller to copy text to clipboard.",
   "keywords": [
     "stimulus",
