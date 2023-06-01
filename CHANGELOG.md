@@ -6,12 +6,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.0] - 2023-06-01
+
+### Chore
+
+- **Breaking** Use a Stimulus native [Value](https://stimulus.hotwired.dev/reference/values) for success content.
+
+```diff
+- data-clipboard-success-content="Copied!"
++ data-clipboard-success-content-value="Copied!"
+```
+
 ## [3.4.0] - 2023-06-01
 
 ### Added
 
 - Allow to use HTML for success content.
-- Use a Stimulus controller value for success content.
 
 ## [3.3.0] - 2022-12-23
 

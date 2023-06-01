@@ -11,14 +11,11 @@ export default class extends Controller {
 
   static targets = ['button', 'source']
   static values = {
+    successContent: String,
     successDuration: {
       type: Number,
       default: 2000
-    },
-    successContent: {
-      type: String,
-      default: '',
-    },
+    }
   }
 
   connect (): void {
