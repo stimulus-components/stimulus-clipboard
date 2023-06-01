@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.4.0] - 2023-06-01
+
+### Added
+
 - Allow to use HTML for success content.
 
 ## [3.3.0] - 2022-12-23
