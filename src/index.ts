@@ -4,6 +4,7 @@ export default class extends Controller {
   hasButtonTarget: boolean
   originalContent: string
   successDurationValue: number
+  successContentValue: string
   timeout: number
   buttonTarget: HTMLElement
   sourceTarget: HTMLInputElement
@@ -13,7 +14,11 @@ export default class extends Controller {
     successDuration: {
       type: Number,
       default: 2000
-    }
+    },
+    successContent: {
+      type: String,
+      default: '',
+    },
   }
 
   connect (): void {
@@ -37,7 +42,7 @@ export default class extends Controller {
       clearTimeout(this.timeout)
     }
 
-    this.buttonTarget.innerHTML = this.data.get('successContent')
+    this.buttonTarget.innerHTML = this.successContentValue
 
     this.timeout = setTimeout(() => {
       this.buttonTarget.innerHTML = this.originalContent
