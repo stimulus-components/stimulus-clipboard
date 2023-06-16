@@ -2,7 +2,7 @@
   "name": "stimulus-clipboard",
   "version": "4.0.0",
   "engines": {
-    "node": "18"
+    "node": "*"
   },
   "description": "A Stimulus controller to copy text to clipboard.",
   "keywords": [
