@@ -1,6 +1,6 @@
 {
   "name": "@stimulus-components/clipboard",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "description": "A Stimulus controller to copy text to clipboard.",
   "keywords": [
     "stimulus",
