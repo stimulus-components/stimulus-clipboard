@@ -1,6 +1,6 @@
-import { Controller } from '@hotwired/stimulus'
+import { Controller } from "@hotwired/stimulus"
 
-export default class extends Controller {
+export default class Clipboard extends Controller {
   hasButtonTarget: boolean
   originalContent: string
   successDurationValue: number
@@ -9,22 +9,22 @@ export default class extends Controller {
   buttonTarget: HTMLElement
   sourceTarget: HTMLInputElement
 
-  static targets = ['button', 'source']
+  static targets = ["button", "source"]
   static values = {
     successContent: String,
     successDuration: {
       type: Number,
-      default: 2000
-    }
+      default: 2000,
+    },
   }
 
-  connect (): void {
+  connect(): void {
     if (!this.hasButtonTarget) return
 
     this.originalContent = this.buttonTarget.innerHTML
   }
 
-  copy (event: Event): void {
+  copy(event: Event): void {
     event.preventDefault()
 
     const text = this.sourceTarget.innerHTML || this.sourceTarget.value
@@ -32,7 +32,7 @@ export default class extends Controller {
     navigator.clipboard.writeText(text).then(() => this.copied())
   }
 
-  copied (): void {
+  copied(): void {
     if (!this.hasButtonTarget) return
 
     if (this.timeout) {
